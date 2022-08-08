@@ -203,11 +203,6 @@ body._lock {
   padding-top: 70px;
 }
 
-.about-me ._active::before,
-.about-me ._active::after {
-  background: #fff;
-}
-
 .about-me ._active::before {
   -webkit-transform: rotate(-40deg);
   -ms-transform: rotate(-40deg);
@@ -221,7 +216,7 @@ body._lock {
 }
 
 .about-me__title._active {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.8);
   color: #000;
   font-weight: 600;
 }
@@ -473,6 +468,11 @@ body._lock {
   margin-bottom: 20px;
 }
 
+.contact__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .contact__box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -484,10 +484,15 @@ body._lock {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .contact__box img {
   max-width: 50px;
+}
+
+.contact__box img:hover {
+  max-width: 60px;
 }
 
 .contact__box a {
@@ -497,6 +502,48 @@ body._lock {
 
 .contact__box a:last-child {
   margin-right: 0px;
+}
+
+.contact__button {
+  background: #000;
+  padding: 10px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.form {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.form__input {
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+.form__input-touch {
+  padding: 5px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 10px;
+}
+
+.form__input-text {
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  min-height: 80px;
+  width: 600px;
 }
 
 body._pc .menu__list > li:hover .menu__sub-list {
@@ -587,6 +634,30 @@ body._touch .menu__list > li._active .menu__arrow {
     -o-transition: all ease 0.3s 0s;
     transition: all ease 0.3s 0s;
     text-align: right;
+  }
+}
+
+@media (max-width: 1100px) {
+  .practice__box {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .practice__box img {
+    max-width: 25%;
+  }
+
+  .practice .reverse {
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
 }
 
